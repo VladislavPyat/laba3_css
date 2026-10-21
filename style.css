@@ -1,0 +1,261 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 16px;
+    font-family: Arial, sans-serif;
+    color: #16324f;
+    background-color: #f4f8fc;
+}
+
+.header {
+    padding: 25px;
+    margin-top: 0;
+    text-align: center;
+    color: white;
+    background: linear-gradient(to right, #0d47a1, #42a5f5);
+}
+
+h2 {
+    margin-top: 30px;
+}
+
+h3 {
+    margin-top: 0;
+}
+
+/* Задание 1: горизонтальное меню */
+
+.horizontal-menu {
+    margin-bottom: 16px;
+    background-color: #1565c0;
+}
+
+.horizontal-menu::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.horizontal-menu a {
+    float: left;
+    padding: 14px 20px;
+    color: white;
+    text-decoration: none;
+    border-right: 1px solid #90caf9;
+}
+
+.horizontal-menu a:hover {
+    background-color: #0d47a1;
+}
+
+/* Трехколоночный макет */
+
+.layout::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.left-column,
+.right-column,
+.center-column {
+    padding: 16px;
+    background-color: #e3f2fd;
+    border: 1px solid #90caf9;
+}
+
+.left-column,
+.right-column {
+    width: 18%;
+    overflow-wrap: break-word;
+}
+
+.left-column {
+    float: left;
+    margin-right: 1%;
+}
+
+.right-column {
+    float: right;
+    margin-left: 1%;
+}
+
+.center-column {
+    overflow: hidden;
+}
+
+.left-column p,
+.right-column p {
+    line-height: 1.5;
+}
+
+.left-column ul,
+.right-column ul {
+    padding-left: 20px;
+}
+
+.left-column li,
+.right-column li {
+    margin-bottom: 10px;
+}
+
+/* Картинки с наплывающими пояснениями */
+
+.photo-card {
+    position: relative;
+    display: inline-block;
+    vertical-align: top;
+    width: 200px;
+    max-width: 100%;
+    height: 160px;
+    margin: 0 10px 14px 0;
+    overflow: hidden;
+    background-color: #bbdefb;
+    box-shadow: 3px 3px 6px #90a4ae;
+}
+
+.photo-card img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.photo-caption {
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    padding: 20px 12px;
+    color: white;
+    text-align: center;
+    background-color: rgba(13, 71, 161, 0.85);
+    transition: left 0.3s;
+}
+
+.photo-caption p {
+    line-height: 1.5;
+}
+
+.photo-card:hover .photo-caption,
+.photo-card:focus .photo-caption {
+    left: 0;
+}
+
+/* Общие отступы между заданиями */
+
+.task {
+    clear: both;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+/* Задания 2 и 2*: подменю справа */
+
+.side-menu,
+.side-menu ul {
+    width: 200px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.side-menu {
+    box-shadow: 4px 4px #90a4ae;
+}
+
+.side-menu li {
+    position: relative;
+}
+
+.side-menu a {
+    display: block;
+    padding: 14px;
+    color: white;
+    text-decoration: none;
+    background-color: #1565c0;
+    border-bottom: 1px solid #90caf9;
+}
+
+.side-menu a:hover {
+    background-color: #0d47a1;
+}
+
+.side-menu ul {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 100%;
+    z-index: 10;
+}
+
+.side-menu ul a {
+    background-color: #1976d2;
+}
+
+/* Открываем только непосредственное подменю */
+.side-menu li:hover > ul,
+.side-menu li:focus-within > ul {
+    display: block;
+}
+
+/* Задание 3: подменю в обычном потоке */
+
+.down-menu,
+.down-menu ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.down-menu {
+    width: 220px;
+    box-shadow: 4px 4px #90a4ae;
+}
+
+.down-menu a {
+    display: block;
+    padding: 14px;
+    color: white;
+    text-decoration: none;
+    background-color: #1565c0;
+    border-bottom: 1px solid #90caf9;
+}
+
+.down-menu a:hover {
+    background-color: #0d47a1;
+}
+
+.down-menu ul {
+    display: none;
+}
+
+.down-menu ul a {
+    padding-left: 26px;
+    color: #16324f;
+    background-color: #bbdefb;
+}
+
+.down-menu ul a:hover {
+    background-color: #90caf9;
+}
+
+.down-menu li:hover > ul,
+.down-menu li:focus-within > ul {
+    display: block;
+}
+
+/* Разделы для переходов по ссылкам */
+
+.info {
+    padding: 20px;
+    background-color: white;
+    border: 1px solid #90caf9;
+}
+
+.info h3 {
+    margin-top: 25px;
+}

@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Лабораторная работа №3 — CSS</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <h1 class="header">Мой сноуборд</h1>
+
+    <!-- Задание 1 -->
+
+    <h2>Задание 1. Трехколоночный макет</h2>
+
+    <nav class="horizontal-menu">
+        <a href="#resorts">Курорты</a>
+        <a href="#news">Новости</a>
+        <a href="#plans">Планы</a>
+        <a href="#about">Обо мне</a>
+    </nav>
+
+    <div class="layout">
+
+        <!-- Сначала левая колонка -->
+        <aside class="left-column">
+            <h3 id="news">Новости</h3>
+
+            <p>
+                В этом сезоне хочу больше времени
+                уделять трюкам и разучивать новые элементы.
+            </p>
+
+            <h3 id="plans">Планы</h3>
+
+            <ul>
+                <li>Больше кататься</li>
+                <li>Изучать трюки</li>
+                <li>Ездить на разные склоны</li>
+            </ul>
+        </aside>
+
+        <!-- Затем правая колонка -->
+        <aside class="right-column">
+            <h3 id="about">Обо мне</h3>
+
+            <p>
+                Я катаюсь на сноуборде уже 10 лет.
+                Начинал заниматься с тренером.
+                Для меня это топовое хобби.
+            </p>
+
+            <h3>Где катаюсь</h3>
+
+            <ul>
+                <li>Уфа</li>
+                <li>Банное</li>
+                <li>Абзаково</li>
+                <li>Мраткино</li>
+                <li>Завьялиха</li>
+            </ul>
+        </aside>
+
+        <!-- Центральная колонка идет последней -->
+        <main class="center-column">
+            <h3 id="resorts">Мои поездки</h3>
+            <p>Наведи мышку на фотографию.</p>
+
+            <div class="photo-card" tabindex="0">
+                <img src="img/zavyalikha.jpg"
+                     alt="Фотография с Завьялихи">
+
+                <div class="photo-caption">
+                    <strong>Завьялиха</strong>
+                    <p>Одна из моих поездок на сноуборде.</p>
+                </div>
+            </div>
+
+            <div class="photo-card" tabindex="0">
+                <img src="img/mratkino.jpg"
+                     alt="Фотография с Мраткино">
+
+                <div class="photo-caption">
+                    <strong>Мраткино</strong>
+                    <p>Еще одно место, где я катался.</p>
+                </div>
+            </div>
+
+            <div class="photo-card" tabindex="0">
+                <img src="img/abzakovo.jpg"
+                     alt="Фотография из Абзаково">
+
+                <div class="photo-caption">
+                    <strong>Абзаково</strong>
+                    <p>Сюда я тоже приезжаю кататься.</p>
+                </div>
+            </div>
+        </main>
+
+    </div>
+
+    <!-- Задание 2 -->
+
+    <section class="task">
+        <h2>Задание 2. Подменю справа</h2>
+
+        <ul class="side-menu">
+            <li>
+                <a href="#resorts">Курорты ▸</a>
+
+                <ul>
+                    <li><a href="#zavyalikha">Завьялиха</a></li>
+                    <li><a href="#mratkino">Мраткино</a></li>
+                    <li><a href="#abzakovo">Абзаково</a></li>
+                </ul>
+            </li>
+
+            <li>
+                <a href="#equipment">Снаряжение ▸</a>
+
+                <ul>
+                    <li><a href="#board">Сноуборд</a></li>
+                    <li><a href="#boots">Ботинки</a></li>
+                    <li><a href="#helmet">Шлем</a></li>
+                </ul>
+            </li>
+
+            <li><a href="#plans">Планы на сезон</a></li>
+            <li><a href="#about">Обо мне</a></li>
+        </ul>
+    </section>
+
+    <!-- Задание 2 со звездочкой -->
+
+    <section class="task">
+        <h2>Задание 2*. Двойная вложенность</h2>
+
+        <ul class="side-menu">
+            <li>
+                <a href="#resorts">Катание ▸</a>
+
+                <ul>
+                    <li>
+                        <a href="#resorts">Курорты ▸</a>
+
+                        <ul>
+                            <li><a href="#zavyalikha">Завьялиха</a></li>
+                            <li><a href="#mratkino">Мраткино</a></li>
+                            <li><a href="#abzakovo">Абзаково</a></li>
+                        </ul>
+                    </li>
+
+                    <li>
+                        <a href="#equipment">Снаряжение ▸</a>
+
+                        <ul>
+                            <li><a href="#board">Сноуборд</a></li>
+                            <li><a href="#boots">Ботинки</a></li>
+                            <li><a href="#helmet">Шлем</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+
+            <li><a href="#plans">Планы на сезон</a></li>
+            <li><a href="#about">Обо мне</a></li>
+        </ul>
+    </section>
+
+    <!-- Задание 3 -->
+
+    <section class="task">
+        <h2>Задание 3. Подменю вниз</h2>
+
+        <ul class="down-menu">
+            <li>
+                <a href="#resorts">Курорты ▾</a>
+
+                <ul>
+                    <li><a href="#zavyalikha">Завьялиха</a></li>
+                    <li><a href="#mratkino">Мраткино</a></li>
+                    <li><a href="#abzakovo">Абзаково</a></li>
+                </ul>
+            </li>
+
+            <li>
+                <a href="#equipment">Снаряжение ▾</a>
+
+                <ul>
+                    <li><a href="#board">Сноуборд</a></li>
+                    <li><a href="#boots">Ботинки</a></li>
+                    <li><a href="#helmet">Шлем</a></li>
+                </ul>
+            </li>
+
+            <li><a href="#plans">Планы на сезон</a></li>
+            <li><a href="#about">Обо мне</a></li>
+        </ul>
+    </section>
+
+    <!-- Разделы, на которые ведут ссылки меню -->
+
+    <section class="info">
+        <h2>Курорты</h2>
+
+        <h3 id="zavyalikha">Завьялиха</h3>
+        <p>На Завьялихе я катался на сноуборде.</p>
+
+        <h3 id="mratkino">Мраткино</h3>
+        <p>Мраткино — еще одно место из моих поездок.</p>
+
+        <h3 id="abzakovo">Абзаково</h3>
+        <p>В Абзаково я тоже езжу кататься.</p>
+
+        <h2 id="equipment">Снаряжение</h2>
+
+        <h3 id="board">Сноуборд</h3>
+        <p>Доска с креплениями для спуска по снежному склону.</p>
+
+        <h3 id="boots">Ботинки</h3>
+        <p>Специальные ботинки фиксируют ноги в креплениях.</p>
+
+        <h3 id="helmet">Шлем</h3>
+        <p>Шлем — часть защитного снаряжения для катания.</p>
+    </section>
+
+</body>
+</html>
